@@ -382,6 +382,17 @@ img {
   color: var(--white-text-color);
 }
 
+/* Модальне вікно */
+.backdrop.is-hidden .modal-wraper {
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0;
+}
+
+.backdrop .modal-wraper {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
 /* Блок інформації про принципи та політику Студії */
 .features-section {
   padding-bottom: 0;
@@ -432,10 +443,39 @@ img {
 
 .work-item {
   margin-right: 30px;
+  position: relative;
 }
 
 .work-item:last-child {
   margin-right: 0;
+}
+
+.work-item::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.work-item-description {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
 }
 
 /* Оформлення команди */
