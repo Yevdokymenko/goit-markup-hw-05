@@ -462,7 +462,9 @@ img {
 }
 
 .work-item-description {
-  display: flex;
+  display: block;
+  height: auto;
+  width: auto;
   position: absolute;
   left: 50%;
   bottom: 0;
